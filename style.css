@@ -1,0 +1,222 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #003366; /* Changed to a more 'European Blue' */
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #FFCC00 3px solid; /* Changed to a 'Gold/Yellow' accent */
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    float: right;
+    margin-top: 5px;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #FFCC00; /* Accent color */
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+#showcase {
+    min-height: 400px;
+    background: url('placeholder-modern-campus.jpg') no-repeat 0 -100px; /* Replace */
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#showcase h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+#showcase .button {
+    display: inline-block;
+    background: #FFCC00;
+    color: #003366;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+#showcase .button:hover {
+    background: #e6b800;
+}
+
+
+.main-content {
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.main-content h2 {
+    color: #003366;
+    border-bottom: 2px solid #FFCC00;
+    padding-bottom: 10px;
+}
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    margin-right: 3.33%;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    min-height: 220px; /* Added for better alignment */
+}
+#boxes .box:last-child {
+    margin-right: 0;
+}
+
+#boxes .box .icon-container { /* New container for icon background */
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px auto; /* Center the container and add bottom margin */
+    border-radius: 50%;
+    background-color: #FFCC00; /* Yellow background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Padding inside the circle for the SVG */
+    box-sizing: border-box;
+}
+
+#boxes .box svg { /* Styling for the SVG icons themselves */
+    width: 100%; /* Make SVG fill the padded container */
+    height: 100%;
+    fill: #003366; /* Dark blue icon color, contrasting with yellow background */
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #003366;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.form-group textarea {
+    height: 100px;
+}
+button.submit-button {
+    background: #FFCC00;
+    color: #003366;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+}
+button.submit-button:hover {
+    background: #e6b800;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav ul,
+    #boxes .box {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between stacked boxes */
+    }
+    header nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+    #showcase h1{
+        font-size: 40px;
+    }
+    .container {
+        width: 95%;
+    }
+}
